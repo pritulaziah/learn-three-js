@@ -1,14 +1,12 @@
 import useCanvas from "@hooks/useCanvas";
 import Canvas from "@components/Canvas";
-import RagingSeaClass from "./RagingSeaClass";
+import RagingSeaClass from "./RagingSeaCanvas";
 
 const initCanvas = (canvasElement: HTMLCanvasElement) =>
   new RagingSeaClass(canvasElement);
 
-function RagingSea() {
+export function RagingSea() {
   const canvasRef = useCanvas(initCanvas);
 
   return <Canvas ref={canvasRef} />;
 }
-
-export default RagingSea;
